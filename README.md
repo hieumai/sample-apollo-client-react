@@ -1,6 +1,6 @@
-# sample-graphql-client-react
+# sample-apollo-client-react
 
-Sample react GraphQL client code extracted from https://github.com/apollographql/fullstack-tutorial
+Sample react Apollo Client code extracted from https://github.com/apollographql/fullstack-tutorial
 
 ## How to start
 - npm install
