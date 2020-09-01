@@ -23,14 +23,19 @@ export const typeDefs = gql`
 // Set up our apollo-client to point at the server we created
 // this can be local or a remote endpoint
 const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+  // InMemoryCache implementation
   cache,
+  // server graphql endpoint
   uri: 'http://localhost:4000/graphql',
+  // injected http headers for graphql endpoint
   headers: {
     authorization: localStorage.getItem('token') || '',
     'client-name': 'Space Explorer [web]',
     'client-version': '1.0.0',
   },
+  // local schema types
   typeDefs,
+  // local resolvers
   resolvers: {},
 });
 
